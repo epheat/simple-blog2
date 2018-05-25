@@ -1,0 +1,17 @@
+h1 {
+    margin: 20px 0px;
+    text-align: center;
+}
+.sidebar {
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    height: 100%;
+}
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+ul, ol {
+    padding-left: 30px;
+}
