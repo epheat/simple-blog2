@@ -8,6 +8,8 @@ export default class BlogEntry extends React.Component {
     constructor() {
         super()
         this.state = {liked: false}
+
+        this.toggleLike = this.toggleLike.bind(this);
     }
 
     toggleLike() {
@@ -32,6 +34,7 @@ export default class BlogEntry extends React.Component {
                     <button className="btn btn-primary">Primary</button>
                     <button className="btn btn-secondary">Secondary</button>
                     <button className="btn btn-danger">Danger</button>
+                    <i onClick={this.toggleLike} className="material-icons like-button">{ this.state.liked ? 'favorite' : 'favorite_border'}</i>
                 </div>
             </div>
         );
