@@ -26,15 +26,19 @@ export default class BlogEntry extends React.Component {
 
     render() {
         return (
-            <div className="sb-card col-12">
-                <div>[image content]</div>
-                <h3>{this.props.title}</h3>
-                <p>{this.trimContent(this.props.content)}</p>
-                <div className="sb-actions">
-                    <button className="btn btn-primary">Primary</button>
-                    <button className="btn btn-secondary">Secondary</button>
-                    <button className="btn btn-danger">Danger</button>
-                    <i onClick={this.toggleLike} className="material-icons like-button">{ this.state.liked ? 'favorite' : 'favorite_border'}</i>
+            <div className="col-12 col-md-6">
+                <div className="card sb-card">
+                    <img className="card-img-top" src={'dist/images/' + this.props.image} alt="image" />
+                    <div className="card-body">
+                        <h2 className="card-title">{this.props.title}</h2>
+                        <p className="card-text">{this.trimContent(this.props.content)}</p>
+                        <div className="sb-actions">
+                            <button className="btn btn-primary">Primary</button>
+                            <button className="btn btn-secondary">Secondary</button>
+                            <button className="btn btn-danger">Danger</button>
+                            <i onClick={this.toggleLike} className="material-icons like-button">{ this.state.liked ? 'favorite' : 'favorite_border'}</i>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
